@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductModule
+    ProductModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi())
